@@ -1,10 +1,11 @@
 $(function() {
 
-	var rover1, rover2;
+	var rover1, rover2, plateau1;
 
 	$("#plateau").click(function(e)
 	{
-		$('h3#plateau_result').html(createPlateau(0,0,$("input#x").val(), $("input#y").val()));
+		plateau1 = new plateau(0,0,$("input#x").val(),$("input#y").val());
+		$('h3#plateau_result').html(plateau1.getPlateau());
 	});
 
 	$("#rover1button").click(function(e)
@@ -50,15 +51,15 @@ $(function() {
 });
 
 
-function createPlateau(x,y,a,b){
-	var bottomX = parseInt(x);
-	var bottomY = parseInt(y);
-	var topA = parseInt(a);
-	var topB = parseInt(b);
+// function createPlateau(x,y,a,b){
+// 	var bottomX = parseInt(x);
+// 	var bottomY = parseInt(y);
+// 	var topA = parseInt(a);
+// 	var topB = parseInt(b);
 
-	console.log("The Plateau" + " " + bottomX + " "  + bottomY + " " + topA + " " + topB);
-	return "The Plateau is " + topA + " by " + topB + " in size!";
-}
+// 	console.log("The Plateau" + " " + bottomX + " "  + bottomY + " " + topA + " " + topB);
+// 	return "The Plateau is " + topA + " by " + topB + " in size!";
+// }
 
 
 
