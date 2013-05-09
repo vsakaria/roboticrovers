@@ -1,16 +1,31 @@
-createPlateau(0,0,5,5);
+$(function() {
 
-var input = "LMLMLMLMM";
+	var rover1, rover2;
 
-var rover1 = new rover(1,2,"N");
+	$("#plateau").click(function(e)
+	{
+		createPlateau(0,0,$("input#x").val(), $("input#y").val());
+	});
 
-for( var i = 0, len = input.length; i < len; i++)
-{
-	if (input[i] == "R" || input[i] == "L")
-		rover1.turnRover(input[i]);
-	else
-		rover1.moveRover();
-};
+	$("#rover1button").click(function(e)
+	{
+		rover1 = new rover($("input#rover1X").val(), $("input#rover1Y").val(), $("#rover1Compass").val());
+	});
+
+	$("#rover1DirectionsButton").click(function(e)
+	{
+		var inputStr = $('#rover1Directions').val();
+
+		for( var i = 0, len = inputStr.length; i < len; i++)
+		{
+			if (inputStr[i] == "R" || inputStr[i] == "L")
+				rover1.turnRover(inputStr[i]);
+			else
+				rover1.moveRover();
+		}
+	});
+
+});
 
 
 function createPlateau(x,y,a,b){
