@@ -1,29 +1,16 @@
 createPlateau(0,0,5,5);
 
-var rover1 = new rover(3,3,"E");
+var input = "LMLMLMLMM";
 
-rover1.moveRover();
-rover1.moveRover();
-rover1.turnRover("R");
-rover1.moveRover();
-rover1.moveRover();
-rover1.turnRover("R");
-rover1.moveRover();
-rover1.turnRover("R");
-rover1.turnRover("R");
-rover1.moveRover();
+var rover1 = new rover(1,2,"N");
 
-
-
-
-
-// rover1.turnRover("L");
-// rover1.moveRover();
-// rover1.turnRover("R");
-// rover1.moveRover();
-// rover1.turnRover("L");
-// rover1.moveRover();
-// rover1.moveRover();
+for( var i = 0, len = input.length; i < len; i++)
+{
+	if (input[i] == "R" || input[i] == "L")
+		rover1.turnRover(input[i]);
+	else
+		rover1.moveRover();
+};
 
 
 function createPlateau(x,y,a,b){
