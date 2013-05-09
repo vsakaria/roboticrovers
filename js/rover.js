@@ -61,3 +61,9 @@ rover.prototype.moveRover = function()
 	console.log("Rover moved to" + " " + this.x + " " + this.y + " " + this.roverDirection);
 };
 
+rover.prototype.getBearings = function()
+{
+	return "The Rover is positioned at " + this.x + " ," + this.y + " " + "and is facing " + this.roverDirection;
+}
+
+
