@@ -8,15 +8,19 @@ $(function() {
 		$('h3#plateau_result').html(plateau1.getPlateau());
 	});
 
-	$("#rover1button").click(function(e)
+	
+	$("form.rover").submit(function(e)
 	{
-		rover1 = new rover($("input#rover1X").val(), $("input#rover1Y").val(), $("#rover1Compass").val());
-			$("h3#rover1_result").html(rover1.getBearings());
+		e.preventDefault();
+		console.log('rover' + $(this).data('rover'));
+		rover1 = new rover($("input#roverX").val(), $("input#roverY").val(), $("#roverCompass").val());
+			$("h3#rover_result").html(rover1.getBearings());
+			debugger;
 	});
 
-	$("#rover1DirectionsButton").click(function(e)
+	$("#roverDirectionsButton").click(function(e)
 	{
-		var inputStr = $('#rover1Directions').val();
+		var inputStr = $('#roverDirections').val();
 
 		for( var i = 0, len = inputStr.length; i < len; i++)
 		{
@@ -25,27 +29,7 @@ $(function() {
 			else
 				rover1.moveRover();
 		}
-		$("h3#rover1_dir_result").html(rover1.getBearings());
-	});
-
-	$("#rover2button").click(function(e)
-	{
-		rover1 = new rover($("input#rover2X").val(), $("input#rover2Y").val(), $("#rover2Compass").val());
-			$("h3#rover2_result").html(rover1.getBearings());
-	});
-
-	$("#rover2DirectionsButton").click(function(e)
-	{
-		var inputStr = $('#rover2Directions').val();
-
-		for( var i = 0, len = inputStr.length; i < len; i++)
-		{
-			if (inputStr[i] == "R" || inputStr[i] == "L")
-				rover1.turnRover(inputStr[i]);
-			else
-				rover1.moveRover();
-		}
-		$("h3#rover2_dir_result").html(rover1.getBearings());
+		$("h3#rover_dir_result").html(rover1.getBearings());
 	});
 
 });

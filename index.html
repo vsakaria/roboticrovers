@@ -7,10 +7,15 @@
 		<meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
+		
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 		<script src="js/rover.js" type="text/javascript" language="javascript"></script>
 		<script src="js/plateau.js" type="text/javascript" language="javascript"></script>
+		<script src="js/form.js" type="text/javascript" language="javascript"></script>
 		<script src="js/run.js" type="text/javascript" language="javascript"></script>
+		
+
+
 
 	</head>
 	<body>
@@ -22,76 +27,22 @@
 		<div id="main_container">
 
 			<div class="row-fluid offset6 center">
-			<h2>Create a Plateau<h2>
-				<h3>Select x value<h3>
-					<input id="x" type="text" name="x"><br>
-				<h3>Select y value<h3>
-					<input id="y" type="text" name="y"><br>
+				<h2>Create a Plateau<h2>
+					<h3>Select x value<h3>
+						<input id="x" type="text" name="x"><br>
+					<h3>Select y value<h3>
+						<input id="y" type="text" name="y"><br>
 
-			<button id="plateau" type="button">Click Me!</button>
+				<button id="plateau" type="button">Click Me!</button>
 
-			<h3 class="red" id="plateau_result"></h3>
+				<h3 class="red" id="plateau_result"></h3>
 			</div>
-
-			<div class="row-fluid offset6 center">
-			<h2>Create Rover 1<h2>
-				<h3>Select x value<h3>
-					<input id="rover1X" type="text" name="x"><br>
-				<h3>Select y value<h3>
-					<input id="rover1Y" type="text" name="y"><br>
-				<h3>Select Compass Direction value<h3>
-					<form action="">
-					<select id="rover1Compass" name="compass">
-					<option value="N">N</option>
-					<option value="S">S</option>
-					<option value="E">E</option>
-					<option value="W">W</option>
-					</select>
-					</form>
-
-			<button id="rover1button" type="button">Click Me!</button>
-			<h3 class="red" id="rover1_result"></h3>
-			</div>
-
-
-			<div class="row-fluid offset6 center">
-			<h2>Give Directions<h2>
-				<input id="rover1Directions" type="text" name="x"><br>
-
-				<button id="rover1DirectionsButton" type="button">Click Me!</button>
-				<h3 class="red" id="rover1_dir_result"></h3>
-			</div>
-
-			<div class="row-fluid offset6">
-			<h2>Create Rover 2<h2>
-				<h3>Select x value<h3>
-					<input id="rover2X" type="text" name="x"><br>
-				<h3>Select y value<h3>
-					<input id="rover2Y" type="text" name="y"><br>
-				<h3>Select Compass Direction value<h3>
-					<form action="">
-					<select id="rover2Compass" name="compass">
-					<option value="N">N</option>
-					<option value="S">S</option>
-					<option value="E">E</option>
-					<option value="W">W</option>
-					</select>
-					</form>
-
-			<button id="rover2button" type="button">Click Me!</button>
-			<h3 class="red" id="rover2_result"></h3>
-			</div>
-
-			<div class="row-fluid offset6">
-			<h2>Give Directions<h2>
-				<input id="rover2Directions" type="text" name="x"><br>
-
-				<button id="rover2DirectionsButton" type="button">Click Me!</button>
-				<h3 class="red" id="rover2_dir_result"></h3>
-			</div>
-
 		</div>
+
 
 
 	</body>
 </html>
+
+
+<!--<div class="form row-fluid offset6 center"><h2>Create a Rover<h2><h3>Select x value<h3><input id="roverX" type="text" name="x"><br><h3>Select y value<h3><input id="roverY" type="text" name="y"><br><h3>Select Compass Direction value<h3><form action=""><select id="roverCompass" name="compass"><option value="N">N</option><option value="S">S</option><option value="E">E</option><option value="W">W</option></select></form><button id="roverbutton" type="button">Click Me!</button><h3 class="red" id="rover_result"></h3></div><div class="row-fluid offset6 center"><h2>Give Directions<h2><input id="roverDirections" type="text" name="x"><br><button id="roverDirectionsButton" type="button">Click Me!</button><h3 class="red" id="rover_dir_result"></h3></br></br></br></div>-->
