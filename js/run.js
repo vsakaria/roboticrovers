@@ -1,6 +1,7 @@
 $(function() {
 
-	var rover1, rover2, plateau1;
+	var
+	 rover1, rover2, plateau1;
 
 	$("#plateau").click(function(e)
 	{
@@ -12,10 +13,14 @@ $(function() {
 	$("form.rover").submit(function(e)
 	{
 		e.preventDefault();
-		console.log('rover' + $(this).data('rover'));
-		rover1 = new rover($("input#roverX").val(), $("input#roverY").val(), $("#roverCompass").val());
-			$("h3#rover_result").html(rover1.getBearings());
-			debugger;
+		
+		var data = $(this).data('rover')
+
+		eval("var " + data + " = new rover()");
+		debugger;
+
+		// rover = new rover($("input#roverX").val(), $("input#roverY").val(), $("#roverCompass").val());
+		// 	$("h3#rover_result").html(rover1.getBearings());	
 	});
 
 	$("#roverDirectionsButton").click(function(e)

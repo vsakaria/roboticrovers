@@ -8,7 +8,7 @@ $(function() {
 		$('#main_container').append(form);
 
 		$('form.rover').each(	function(){
-			$(this).data('rover', id);
+			$(this).data('rover', 'rover' + id);
 			id++;
 		});
 });
